@@ -1,0 +1,122 @@
+IPv4 extractor test cases
+Each case lists the input line and the exact expected response.
+
+Case 1
+Input: 192.168.1.1
+Expected: Extracted IPv4 address: 192.168.1.1 (decimal value: 3232235777, port: none)
+
+Case 2
+Input: Server=192.168.1.1:8080!
+Expected: Extracted IPv4 address: 192.168.1.1 (decimal value: 3232235777, port: 8080)
+
+Case 3
+Input: 0.0.0.0:0
+Expected: Extracted IPv4 address: 0.0.0.0 (decimal value: 0, port: 0)
+
+Case 4
+Input: 255.255.255.255:65535
+Expected: Extracted IPv4 address: 255.255.255.255 (decimal value: 4294967295, port: 65535)
+
+Case 5
+Input: abc10.0.0.1xyz
+Expected: Extracted IPv4 address: 10.0.0.1 (decimal value: 167772161, port: none)
+
+Case 6
+Input: 1.2.3.4:65535
+Expected: Extracted IPv4 address: 1.2.3.4 (decimal value: 16909060, port: 65535)
+
+Case 7
+Input: 1.2.3.4:00001
+Expected: No valid IPv4 address found.
+
+Case 8
+Input: 256.1.1.1
+Expected: No valid IPv4 address found.
+
+Case 9
+Input: 01.2.3.4
+Expected: No valid IPv4 address found.
+
+Case 10
+Input: 1.02.3.4
+Expected: No valid IPv4 address found.
+
+Case 11
+Input: 1.2.003.4
+Expected: No valid IPv4 address found.
+
+Case 12
+Input: 1.2.3
+Expected: No valid IPv4 address found.
+
+Case 13
+Input: 1.2.3.4.5
+Expected: No valid IPv4 address found.
+
+Case 14
+Input: 1..2.3.4
+Expected: No valid IPv4 address found.
+
+Case 15
+Input: 1.2.3.4:
+Expected: No valid IPv4 address found.
+
+Case 16
+Input: 1.2.3.4:080
+Expected: No valid IPv4 address found.
+
+Case 17
+Input: 1.2.3.4:65536
+Expected: No valid IPv4 address found.
+
+Case 18
+Input: 1.2.3.4:80:90
+Expected: No valid IPv4 address found.
+
+Case 19
+Input: 1.2.3.4.
+Expected: No valid IPv4 address found.
+
+Case 20
+Input: .1.2.3.4
+Expected: No valid IPv4 address found.
+
+Case 21
+Input: 999.192.168.1.1
+Expected: No valid IPv4 address found.
+
+Case 22
+Input: 1.2.3.4:80.5
+Expected: No valid IPv4 address found.
+
+Case 23
+Input: 1.2.3.4:999999999999999999999
+Expected: No valid IPv4 address found.
+
+Case 24
+Input: 1.2.3.4:0
+Expected: Extracted IPv4 address: 1.2.3.4 (decimal value: 16909060, port: 0)
+
+Case 25
+Input: 1.2.3.4:000
+Expected: No valid IPv4 address found.
+
+Case 26
+Input: 1.2.3.4::
+Expected: No valid IPv4 address found.
+
+Case 27
+Input: 1.2.3:4
+Expected: No valid IPv4 address found.
+
+Case 28
+Input: 1.2.3.4a5.6.7.8
+Expected: Extracted IPv4 address: 1.2.3.4 (decimal value: 16909060, port: none)
+
+Case 29
+Input: bad:1.2.3.4 okay 8.8.8.8
+Expected: Extracted IPv4 address: 8.8.8.8 (decimal value: 134744072, port: none)
+
+Case 30
+Input: ENDx 1.2.3.4
+Expected: Extracted IPv4 address: 1.2.3.4 (decimal value: 16909060, port: none)
