@@ -47,7 +47,7 @@ bool parseNumber(const string& token,
             return false;
 
         // Manual digit accumulation
-        value = value * 10 + (token[i] - '0');
+        value = value * 10 + static_cast<unsigned long>(token[i] - '0');
 
         if (value > maxValue)
             return false;
