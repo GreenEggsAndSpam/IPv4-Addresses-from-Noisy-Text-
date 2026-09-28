@@ -1,6 +1,6 @@
 AI use
 The model used was ChatGPT's GPT-6 Sol light model 
-Date: 9/27/26
+Date the model was consulted: 9/27/26
 
 I used to generate the first C++ solution. My initial prompt was this:
 
